@@ -1,6 +1,6 @@
 <!-- Large desktop banner. Must be used with "Large banner limit and switch" mixin -->
 
- <!-- CREATED AT: 2019-08-13T19:19:38+00:00 -->
+ <!-- CREATED AT: 2019-08-13T19:21:33+00:00 -->
 
 <style>
 /* Hide when editing */
@@ -2231,12 +2231,12 @@ $(function() {
     });
 
 
-    /* Hide banner outside of main namespace (and Main Page, for sites where that isn't in main namespace)
+    /* Hide banner outside of main namespace (and Main Page, for sites where that isn't in main namespace) */
     if ( mw.config.get('wgNamespaceNumber') > 0 && !mw.config.get('wgIsMainPage') ) {
         mw.centralNotice.bannerData.hideResult = true;
         mw.centralNotice.bannerData.hideReason = 'namespace';
     }
-     Hide banner on mobile site, in case wrong device settings were chosen 
+    /* Hide banner on mobile site, in case wrong device settings were chosen */
     if ( mw.config.get('skin') === 'minerva' ) {
         mw.centralNotice.bannerData.hideResult = true;
         mw.centralNotice.bannerData.hideReason = 'other';
@@ -2244,7 +2244,7 @@ $(function() {
 
     if (!mw.centralNotice.bannerData.hideResult) {
         frb.show();
-    }*/
+    }
 
 });
 </script>
